@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xin.jpush.dao.JpushDao">
+    <select id="queryListById" resultType="com.xin.jpush.entity.JpushEntity">
+   select app_push_id,app_id,app_key
+   from app_push
+   where app_id= '2'
+</select>
+    <insert id="insertList" useGeneratedKeys="true" keyProperty="apppushid" keyColumn="app_push_id">
+        insert into app_push(app_push_id,app_id,app_key,master_secret)
+        values ('2','3','339893b41e3c64a6e98a1cf17','8fa8a3e3762e31a5460643sd')
+   </insert>
+    <!-- (#{apppushid},#{appid},#{appkey},#{masterSecret})-->
+</mapper>

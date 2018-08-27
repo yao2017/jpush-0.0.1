@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xin.jpush.dao.JpushRelationDao">
+    <select id="queryList" resultType="com.xin.jpush.entity.JpushRelationEntity">
+   select customer_id,app_id,client_id,client_type,status
+   from  push_customer_client
+</select>
+</mapper>
